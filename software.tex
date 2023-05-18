@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\title{Project Report: Random Audio Playlist}
+\author{Apar Saxena (bt22btech11003)}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+The goal of this project was to develop a Python script that generates a random audio playlist and plays the audio files in a random order. The script allows users to listen to their collection of audio files in a fresh and unpredictable sequence, adding excitement to the listening experience.
+
+\section{Implementation}
+The implementation involved the following steps:
+
+\begin{itemize}
+    \item \textbf{Audio Directory:} The script begins by specifying the directory where the audio files are located. Users need to provide the actual path to the audio directory.
+    \item \textbf{File Retrieval:} Using the \texttt{os.listdir} function, the script retrieves a list of all files within the specified audio directory. It then filters this list to include only the files with the '.mp3' extension.
+    \item \textbf{Randomization:} The filtered list of audio files is shuffled using the \texttt{random.shuffle} function. This randomization step ensures that the playlist is unique and unpredictable for each run.
+    \item \textbf{Audio Playback:} The script uses the \texttt{playsound} library to play each audio file in the shuffled list. The \texttt{playsound} function is called within a \texttt{for} loop, sequentially playing the audio files.
+    
+\end{itemize}
+
+\section{Usage}
+To use the script, follow these steps:
+
+\begin{enumerate}
+    \item Install the \texttt{playsound} library by running \texttt{pip install playsound} in the terminal or command prompt.
+    \item Modify the \texttt{audio\_dir} variable in the script to specify the path to the directory containing your audio files.
+    \item Run the script using Python: \texttt{python audio\_playlist.py}.
+    
+\end{enumerate}
+
+\section{Conclusion}
+The random audio playlist script provides a simple and effective solution for generating random playback sequences of audio files. By shuffling the playlist, users can enjoy their audio collection in a fresh and exciting way, adding variety and unpredictability to their listening experience.
+
+\section{Further Enhancements}
+The project can be further improved in the following ways:
+
+\begin{itemize}
+    \item Implement a graphical user interface (GUI) to provide a user-friendly interface for selecting the audio directory and controlling the playback.
+    \item Support multiple audio file formats to cater to different user preferences.
+    \item Allow users to customize the playlist length or specify the number of times the playlist should be played.
+    \item Implement a feature to skip to the next audio file during playback.
+    \item Enable the script to remember the last played position and resume from that point in the next session.
+\end{itemize}
+
+Overall, this project serves as a foundation for building more advanced audio playlist management systems and provides a starting point for adding additional features to enhance the user experience.
+
+\end{document}
